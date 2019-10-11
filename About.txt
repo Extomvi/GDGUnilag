@@ -1,0 +1,3 @@
+Well, this seems to be my first push action on GitHub using my GitBash.
+
+Seems interesting.
