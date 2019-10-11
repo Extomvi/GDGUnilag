@@ -1,2 +1,2 @@
 # GDGUnilag
-testing
+This is basically a first python repository.
