@@ -1,6 +1,9 @@
 '''
 SETTING METHODS WITHIN THE CLASS
 '''
+import datetime
+
+now = datetime.datetime.now()
 
 class Piglet:
     name = "tom"
@@ -22,3 +25,4 @@ pam.speak()
 piggy = Piglet()
 piggy.years = 5
 print(piggy.pig_years())
+print("This code ran at {}".format(now))
