@@ -2,14 +2,17 @@
 UNDERSTANDING CLASSES, THEIR METHODS AND INSTANCES
 '''
 
-class Apples:
+class Apple:
     color = ""
     flavor = ""
 
-fruit = Apples()
+fruit = Apple()
 fruit.color = "red"
 fruit.flavor = "sweet"
 
-veg = Apples()
+veg = Apple()
 veg.color = "green"
 veg.flavor = "bleh"
+
+print(fruit.color)
+print(veg.flavor)
