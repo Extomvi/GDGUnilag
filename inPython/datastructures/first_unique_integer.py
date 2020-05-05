@@ -5,7 +5,7 @@ You have a queue of integers, you need to retrieve the first unique integer in t
 '''
 
 class FirstUniqueCharacter:
-    def __init__(self, nums: list[int]):
+    def __init__(self, nums: list[int]):  #Not sure why this throws an error though(LOL)
         self.store = {}
         self.check = set()
         self.nums = nums
