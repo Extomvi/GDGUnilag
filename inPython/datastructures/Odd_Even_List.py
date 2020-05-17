@@ -2,7 +2,7 @@
 
 class Solution:
     def oddEvenList(self, head: ListNode) -> ListNode:
-        if not head or if not head.next or if not head.next.next:
+        if not head or not head.next or not head.next.next:
             return head
         
         node = head
