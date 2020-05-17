@@ -1,7 +1,7 @@
 """Invalid transactions checker"""
 
 class Solution:
-    def invalidTransactions(self, transactions: list[str]) -> list[str]:
+    def invalidTransactions(self, transactions: List[str]) -> List[str]:
         trans, i = [], 0
         for char in transactions:
             trans.append(tuple(char.split(",")))
