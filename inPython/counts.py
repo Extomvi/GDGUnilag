@@ -11,7 +11,7 @@ def counting(arr):
             if chars not in temp:
                 remove.append(chars)
             else:
-                store(chars) = min(store[chars], temp[chars])
+                store[chars] = min(store[chars], temp[chars])
 
         for chars in remove:
             del(store[chars])
