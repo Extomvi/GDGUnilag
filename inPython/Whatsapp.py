@@ -5,7 +5,7 @@ client = Client()
 
 from_whatsapp_number= 'whatsapp:+14155238886'
 
-to_whatsapp_number= 'whatsapp:' + os.environ['MY_PHONE_NUMBER']
+to_whatsapp_number= 'whatsapp:' + 'MY_PHONE_NUMBER'
 
 client.messages.create(body='Trial',
 from_=from_whatsapp_number,
