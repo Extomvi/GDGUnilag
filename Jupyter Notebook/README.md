@@ -5,6 +5,8 @@ This folder consists of various Jupyter notebook files:
 
 - **Find Missing Elements**
 
+- **Intro to Array Based Sequences**
+
 
 ### UPDATES
 Updated per time
