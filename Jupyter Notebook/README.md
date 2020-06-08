@@ -17,6 +17,6 @@ This folder consists of various Jupyter notebook files:
 
 
 ### UPDATES
-Updated per time
+Changes to the content of this folder occurs per time...
 
 
