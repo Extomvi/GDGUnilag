@@ -11,6 +11,10 @@ This folder consists of various Jupyter notebook files:
 
 - **Low Level Arrays**
 
+- **Machine Learning Projects in Python.pdf**
+
+- **Regression AutoML**
+
 
 ### UPDATES
 Updated per time
