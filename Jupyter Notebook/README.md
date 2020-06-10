@@ -15,6 +15,8 @@ This folder consists of various Jupyter notebook files:
 
 - **Regression AutoML**
 
+- **Mail**
+
 
 ### UPDATES
 Changes to the content of this folder occurs per time...
