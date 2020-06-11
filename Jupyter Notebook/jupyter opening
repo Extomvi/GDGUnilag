@@ -1,0 +1,18 @@
+source my_jupyter_env/bin/activate
+
+STEP BY STEP GUIDE
+
+sudo apt update
+sudo -H pip3 install --upgrade pip
+sudo -H pip3 install virtualenv
+mkdir ~/my_project_dir
+cd ~/my_project_dir
+virtualenv my_project_env
+source my_project_env/bin/activate
+pip install jupyter
+jupyter notebook
+
+
+
+-> 2524777777(CITS PROTECTED)
+
