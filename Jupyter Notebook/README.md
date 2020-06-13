@@ -19,6 +19,8 @@ This folder consists of various Jupyter notebook files:
 
 - **Jupyter Opening: Opening the jupyter notebook on lunix via the shell**
 
+- **Covid19 detection with Heatmap Visualization**
+
 
 ### UPDATES
 Changes to the content of this folder occurs per time...
