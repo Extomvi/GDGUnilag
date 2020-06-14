@@ -24,5 +24,5 @@ Check each folder directory for sub-sections and files within them.
 
 # Author
 ---------------
-## Tomiwa Adedokun
+## Tomiwa Adedokun.
 ---------------
