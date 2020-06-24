@@ -11,4 +11,4 @@ charset = letters + digits
 # generate a 10 characters pseudo-random alphanumeric password
 password_list = [random.choice(charset) for i in xrange(LENGTH)]
 password = ''.join(password_list)
-print password
+print(password)
