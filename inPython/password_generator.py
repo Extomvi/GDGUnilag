@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+"""Password generator(CHANGED FROM python2 to python3)"""
 import string
 import random
 
