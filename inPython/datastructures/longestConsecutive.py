@@ -1,3 +1,5 @@
+"""Longest COnsecutive number""""
+
 def longestConsecutive(nums):
     store = set(nums); seen = set()
     res = 0
