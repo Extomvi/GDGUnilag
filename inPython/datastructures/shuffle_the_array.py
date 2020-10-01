@@ -11,7 +11,7 @@ class Solution:
                 nums[j] = nums[j - 1]
                 j -= 1
             nums[i+1] = currNum
-            print(nums)
+#            print(nums)   //to reduce the runtime complexity, this is commented out
             shift += 1
             i += 2
         return nums
