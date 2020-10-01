@@ -1,4 +1,4 @@
-"""Longest COnsecutive number""""
+"""Longest COnsecutive number"""
 
 def longestConsecutive(nums):
     store = set(nums); seen = set()
