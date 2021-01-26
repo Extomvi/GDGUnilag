@@ -1,12 +1,12 @@
-a = [2,3,4,5,6,7]
-target = 7
-for i in range(len(a)):
-    first = a[i]
-    for j in range(i+1, len(a)):
-        second = a[j]
-        if second + first == target:
-            print([first, second])
+o(n^2) Solution
+def twoNumSum(array, target):
+    for i in range(len(array) - 1):
+        first = a[i]
+        for j in range(i+1, len(array)):
+            second = a[j]
+            if second + first == target:
+                print([first, second])
     
-        
+print(twoNumSum([2,4,5,-2,43,79,1,45,2,56,7,3,2,45,6,2,1,10,6,9], 15))     
         
     
