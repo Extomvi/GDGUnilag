@@ -35,4 +35,6 @@ def twoNumberSum(array, targetSum): // O(nlogn) Solution
 			right -= 1
     return []
 
+print(twoNumberSum([2,4,5,-2,43,79,1,45,2,56,7,3,2,45,6,2,1,10,6,9], 15))
+
     
