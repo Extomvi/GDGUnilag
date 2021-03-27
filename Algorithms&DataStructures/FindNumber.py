@@ -1,3 +1,4 @@
+## Number finder 
 def findNumber(array, targetNum):
     # Write your code here.
     array.sort()
