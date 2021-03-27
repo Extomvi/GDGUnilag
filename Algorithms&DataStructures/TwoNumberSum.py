@@ -1,4 +1,4 @@
-o(n^2) Solution
+## o(n^2) Solution Two Number Sum
 def twoNumSum(array, target):
     for i in range(len(array) - 1):
         first = a[i]
