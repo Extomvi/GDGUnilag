@@ -42,7 +42,18 @@ const jsFunc = {
 // console.log(Object.values(jsFunc));  // gives every entry value
 // console.log(Object.entries(jsFunc)); // gives the key and the values
 
+const topSpenders = [
+    "wizkid",
+    "burnaboy",
+    "davido"
+]
 
+// console.log(topSpenders.includes("wizkid")); // checks through the array to find elements in them
+//iteration operation
+const updatedTopSpenders = topSpenders.filter(item => {
+    return !item.startsWith("w")
+});
+console.log(updatedTopSpenders);
 
 
 
