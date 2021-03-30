@@ -72,7 +72,16 @@ function doIt(){
 }
 // var is function scoped so it can't be called from outside the function
 // console.log(doIt());
-console.log(doIt());
+// console.log(doIt());
+
+function returnFunction(a) {
+    return function childFunc() {
+        const b = 2
+    console.log(a);
+    }
+}
+const curFunc = returnFunction(5);
+console.log(curFunc());
 
 
 
