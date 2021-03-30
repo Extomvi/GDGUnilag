@@ -64,13 +64,15 @@ const updatedSpenders = topSpenders.map((item, index, mainArray) => {
 
 //function
 
-var number = 5;
+// var number = 5;
 
 function doIt(){
-    const number = 15;
+    var number = 15;
     return number;
 }
-console.log(doIt())
+// var is function scoped so it can't be called from outside the function
+// console.log(doIt());
+console.log(doIt());
 
 
 
