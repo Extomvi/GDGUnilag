@@ -8,7 +8,7 @@ const addMyAge = age + 30;
 const firstName = "Tomiwa";
 const lastName = "Adedokun";
 
-//const fullName = ${firstName} ${lastName};
+// const fullName = `${firstName} ${lastName}`;
 // console.log(fullName);
 
 const isTrue = 1 > 2;
@@ -45,7 +45,8 @@ const jsFunc = {
 const topSpenders = [
     "wizkid",
     "burnaboy",
-    "davido"
+    "davido",
+    "bella"
 ]
 
 // console.log(topSpenders.includes("wizkid")); // checks through the array to find elements in them
@@ -53,8 +54,23 @@ const topSpenders = [
 const updatedTopSpenders = topSpenders.filter(item => {
     return !item.startsWith("w")
 });
-console.log(updatedTopSpenders);
+// console.log(updatedTopSpenders);
 
+// include, filter & map
+const updatedSpenders = topSpenders.map((item, index, mainArray) => {
+    return `celeb_${item}`
+});
+// console.log(updatedSpenders);
+
+//function
+
+var number = 5;
+
+function doIt(){
+    const number = 15;
+    return number;
+}
+console.log(doIt())
 
 
 
