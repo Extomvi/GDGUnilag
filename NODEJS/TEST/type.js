@@ -76,10 +76,11 @@ function doIt(){
 
 function returnFunction(a) {
     return function childFunc() {
-        const b = 2
-    console.log(a);
+        const b = 2;
+    console.log(a)
     }
 }
+//closure which is maintained by the js engine.
 const curFunc = returnFunction(5);
 console.log(curFunc());
 
