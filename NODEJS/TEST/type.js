@@ -82,7 +82,12 @@ function returnFunction(a) {
 }
 //closure which is maintained by the js engine.
 const curFunc = returnFunction(5);
-console.log(curFunc());
+// console.log(curFunc());
 
 
-
+// if else statements
+const isDivisiblybyTwo = (num) => {
+    if(num % 2 == 0){
+        
+    }
+}
