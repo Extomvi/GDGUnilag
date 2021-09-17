@@ -25,6 +25,11 @@ This repository consists of various folders:
 ## -RESUME
 	Contains my *RESUME* as they change from time to time
 
+## -Web
+### -> CSS
+### -> HTML
+
+
 
 Check each folder directory for sub-sections and files within them.
 
