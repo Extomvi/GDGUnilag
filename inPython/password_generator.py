@@ -10,6 +10,6 @@ digits = string.digits
 charset = letters + digits
 
 # generate a 10 characters pseudo-random alphanumeric password
-password_list = [random.choice(charset) for i in xrange(LENGTH)]
+password_list = [random.choice(charset) for i in range(LENGTH)]
 password = ''.join(password_list)
 print(password)
