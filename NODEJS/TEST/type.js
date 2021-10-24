@@ -88,6 +88,7 @@ const curFunc = returnFunction(5);
 // if else statements
 const isDivisiblybyTwo = (num) => {
     if(num % 2 == 0){
-        
+        console.log(`Yes, ${num} is divisble by 2`)
     }
+    console.log(`No, ${num} is not divisble by 2`)
 }
