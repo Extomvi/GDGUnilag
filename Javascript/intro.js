@@ -1,6 +1,6 @@
- let name = "Jeff";
+ let personName = "Jeff";
 
- console.log("My name is: " + name);
+ console.log("My name is: " + personName);
 
  const data = [];
 
