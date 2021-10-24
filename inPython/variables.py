@@ -3,4 +3,4 @@
 var1 = "My first type"
 
 #display the content of your declared variable
-print var1
+print(var1)
