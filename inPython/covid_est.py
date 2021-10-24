@@ -1,3 +1,6 @@
+# SDG project for Covid19 Estimator
+# Facebook-Andela Challenge 2020
+
 import json
 full_dictionary = {"data": {
 "region": {
