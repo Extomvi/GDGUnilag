@@ -1,8 +1,8 @@
 import datetime
 
 user = input('What is your name \n').capitalize()
-allowed_user = ['Tashy', 'TOla', 'Temi']
-allowed_pass = ['passtashy', 'passtola', 'passtemi']
+allowed_user = ['Tashy', 'TOla', 'Temi','Tolu','Taye']
+allowed_pass = ['passtashy', 'passtola', 'passtemi','passtolu','passtaye']
 x = datetime.datetime.now()
 deposit = 100000
 running = True
