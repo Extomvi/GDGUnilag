@@ -26,7 +26,7 @@ if((m + n) % 2 == 1):
 
     # median will be average of elements
     # at index ((m + n)/2 - 1) and (m + n)/2
-    # in the array obtained after merging ar1 and ar2
+    # in the array obtained after merging ar1 and arr2
 else:
     for count in range(((n + m) // 2) + 1):
         m2 = m1
