@@ -1,0 +1,146 @@
+export CLWS=/home/workspace/cl_tutorial
+export CLT=$CLWS/OpenVINO-Custom-Layers
+
+mkdir $CLWS/tf_model
+python $CLT/create_tf_model/build_cosh_model.py $CLWS/tf_model
+
+mkdir cl_cosh
+
+python /opt/intel/openvino/deployment_tools/tools/extension_generator/extgen.py new --mo-tf-ext --mo-op --ie-cpu-ext --ie-gpu-ext --output_dir=$CLWS/cl_cosh
+
+Enter layer name: 
+[cosh]
+
+Do you want to automatically parse all parameters from the model file? (y/n)
+...
+[n]
+
+Enter all parameters in the following format:
+...
+Enter 'q' when finished:
+[q]
+
+Do you want to change any answer (y/n) ? Default 'no'
+[n]
+
+Do you want to use the layer name as the operation name? (y/n)
+[y]
+
+Does your operation change shape? (y/n)  
+[n]
+
+Do you want to change any answer (y/n) ? Default 'no'
+[n]
+
+
+COSH_EXT.py
+
+# Copyright (C) 2018-2019 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
+
+# ===============================================================================
+# Generated file for TensorFlow layer extractor for Model Optimizer
+#
+# You need to modify this file if you need several attributes of the layer
+# to appear in the IR in different format than the default one. Then you
+# need to implement pre-processing logic here.
+#
+# Refer to the section "Extending Model Optimizer with New Primitives" in
+# OpenVINO* documentation (either online or offline in
+# <INSTALL_DIR>/deployment_tools/documentation/docs/index.html an then navigate
+# to the corresponding section).
+# ===============================================================================
+
+import numpy as np
+
+from mo.front.extractor import FrontExtractorOp
+from mo.ops.op import Op
+from mo.front.tf.extractors.utils import *
+from mo.front.common.partial_infer.utils import convert_tf_padding_to_str
+
+
+
+
+class coshFrontExtractor(FrontExtractorOp):
+    op = 'cosh' 
+    enabled = True
+
+    @staticmethod
+    def extract(node):
+        proto_layer = node.pb
+        param = proto_layer.attr
+        # extracting parameters from TensorFlow layer and prepare them for IR
+        attrs = {
+            'op': __class__.op
+        }
+
+        # update the attributes of the node
+        Op.get_op_class_by_name(__class__.op).update_node_stat(node, attrs)
+
+        return __class__.enabled
+
+
+
+COSH.py
+
+# Copyright (C) 2018-2019 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
+
+# ===============================================================================
+# Generated file for Model Optimizer Operation extension for a layer
+#
+# You need to modify this file if you need to
+#   1. set default values for several attributes of the layer
+#      (do it in __init__() method)
+#   2. lessen number of attributes to appear in the IR
+#      (specify such a list in backend_attrs() method)
+#   3. handle the layer which output blob is different to the input one
+#      (implement your own static method infer() and set it as attribute in
+#      __init__() dictionary)
+#
+# Refer to the section "Extending Model Optimizer with New Primitives" in
+# OpenVINO* documentation (either online or offline in
+# <INSTALL_DIR>/deployment_tools/documentation/docs/index.html an then navigate
+# to the corresponding section).
+# ===============================================================================
+
+
+
+from mo.ops.op import Op
+from mo.front.common.partial_infer.elemental import copy_shape_infer
+from mo.graph.graph import Node
+
+
+class coshOp(Op):
+    op = 'cosh'
+    
+    def __init__(self, graph, attrs):
+        mandatory_props = dict(
+            type=__class__.op,
+            op=__class__.op,
+            
+            infer=coshOp.infer            
+        )
+        super().__init__(graph, mandatory_props, attrs)
+    
+    
+    
+    
+    @staticmethod
+    def infer(node: Node):
+        # ==========================================================
+        # You should add your shape calculation implementation here
+        # If a layer input shape is different to the output one
+        # it means that it changes shape and you need to implement
+        # it on your own. Otherwise, use copy_shape_infer(node).
+        # ==========================================================
+        return copy_shape_infer(node)
+
+
+
+then;
+
+cd $CLWS/tf_model
+python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_meta_graph model.ckpt.meta --batch 1 --output "ModCosh/Activation_8/softmax_output" --extensions $CLWS/cl_cosh/user_mo_extensions --output_dir $CLWS/cl_ext_cosh
+
+
