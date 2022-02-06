@@ -2,6 +2,6 @@
 
 Package pack;
 public class A{
-    public void msg(){System.out.print("Hello");}
+    public void msg(){System.out.println("Hello");}
 
 }
