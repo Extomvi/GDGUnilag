@@ -1,4 +1,6 @@
 /* Second Package */
+// importing from package.java file 
+
 Package mypack;
 import pack.A
 
