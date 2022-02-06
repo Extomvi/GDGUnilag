@@ -10,6 +10,8 @@ public class Test {
                 System.out.print("Excellent Score");
                 break;
             case 'B':
+                System.out.print("Great score");
+                break;
             case 'C':
                 System.out.print("Well done");
                 break;
