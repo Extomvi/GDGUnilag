@@ -2,7 +2,7 @@
 // importing from package.java file 
 
 Package mypack;
-import pack.A
+import pack.Al;
 
 class B{
     public static void main(String[] args) {
