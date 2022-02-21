@@ -11,7 +11,7 @@ public class Test {
         } else if (x == 30){
             System.out.print("Value of x is 30");
         } else {
-            System.out.print("This is where the else statement works")
+            System.out.print("This is where the else statement works");
         }
         
     }
