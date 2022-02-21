@@ -10,7 +10,7 @@ public class CollectionsDemo {
         a1.add("Mahnaz");
         a1.add("Ayan");
         System.out.println(" Array Elements");
-        System.out.print("\t", a1);
+        System.out.println("\t", a1);
         
         // Linkedlist
         List l1 = new LinkedList();

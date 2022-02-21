@@ -1,7 +1,7 @@
 /* Second Package */
 // importing from package.java file 
 
-Package mypack;
+package mypack;
 import pack.Al;
 
 class B{
