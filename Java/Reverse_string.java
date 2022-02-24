@@ -1,3 +1,5 @@
+/*Reverse string using two pointers */
+
 class Solution {
     public void ReverseString(char[] str){
         int len = str.length;
