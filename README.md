@@ -1,14 +1,20 @@
 # GDGUnilag
 This repository consists of various folders:
 
+## -Algorithms&DataStructures
+	This includes problems in *Data Structure and Algorithms*
+
 ## -Code
 	This includes my implementation of certain problems that i come across.
+
+## -EXTRAS
+	Other problems
 
 ## -GCP
 	Includes documents used in *Google Cloud Course*.
 
-## -inPython
-	This includes sections that are for *Algorithms*, *Coursera Course Code Implementations*, **Data Structures**, *Intel's Edge AI Nanodegree Codes* & and 		and other programming problem solutions.
+## -Java
+	Includes implementations in Java including some data structures and algorithms problems.
 
 ## -Javascript
 	This includes my development in *Javascript*.
@@ -19,15 +25,18 @@ This repository consists of various folders:
 ## -NODEJS
 	This includes some application development using *Nodejs* package
 
-## -php
-	Development in *php*.
-
 ## -RESUME
 	Contains my *RESUME* as they change from time to time
 
 ## -Web
 ### -> CSS
 ### -> HTML
+
+## -inPython
+	This includes sections that are for *Algorithms*, *Coursera Course Code Implementations*, **Data Structures**, *Intel's Edge AI Nanodegree Codes* & and 		and other programming problem solutions.
+
+## -php
+	Development in *php*.
 
 
 
