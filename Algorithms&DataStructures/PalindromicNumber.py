@@ -8,12 +8,12 @@ def palindromic_number(n):
     while n > reverted_number:
         pop = n%10
         reverted_number = reverted_number*10 + pop
-        n = n/10
+        n = n//10
 
-    return n == reverted_number or n == reverted_number/10
+    return n == reverted_number or n == reverted_number//10
 
 
 
 if __name__ == "__main__":
-    n = 121
+    n = 12321
     print(palindromic_number(n))
