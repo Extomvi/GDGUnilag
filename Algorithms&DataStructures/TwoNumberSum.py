@@ -1,9 +1,9 @@
 ## o(n^2) Solution Two Number Sum
 def twoNumSum(array, target):
     for i in range(len(array) - 1):
-        first = a[i]
+        first = array[i]
         for j in range(i+1, len(array)):
-            second = a[j]
+            second = array[j]
             if second + first == target:
                 print([first, second])
     return []

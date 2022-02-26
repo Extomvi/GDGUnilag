@@ -1,5 +1,5 @@
 ### Two Number Sum
-def twoNumberSum(array, targetSum): //O(n^2) Operation
+def twoNumberSum(array, targetSum): #O(n^2) Operation
     # Write your code here.
 	for items in range(len(array)):
 		first_item = array[items]
@@ -9,7 +9,7 @@ def twoNumberSum(array, targetSum): //O(n^2) Operation
 				return [first_item, second_item]
 	return []
 
-def twoNumberSum(array, targetSum): // O(n) Solution
+def twoNumberSum(array, targetSum): # O(n) Solution
     # Write your code here.
 	nums = {}
 	for num in array:
@@ -18,9 +18,9 @@ def twoNumberSum(array, targetSum): // O(n) Solution
 			return [target, num]
 		else:
 			nums[num] = True
-    return []
+	return []
 
-def twoNumberSum(array, targetSum): // O(nlogn) Solution
+def twoNumberSum(array, targetSum): # O(nlogn) Solution
     # Write your code here.
 	array.sort()
 	left = 0
@@ -33,7 +33,7 @@ def twoNumberSum(array, targetSum): // O(nlogn) Solution
 			left += 1
 		elif result > targetSum:
 			right -= 1
-    return []
+	return []
 
 print(twoNumberSum([2,4,5,-2,43,79,1,45,2,56,7,3,2,45,6,2,1,10,6,9], 15))
 
