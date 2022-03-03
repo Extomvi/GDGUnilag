@@ -8,7 +8,7 @@ def medianSortedArrays(nums1, nums2):
 
     if len(B) < len(A):
         B, A = A, B
-        print(A, B)
+        #print(A, B)
     
     l, r = 0, len(A)-1
     #print(l, r)
