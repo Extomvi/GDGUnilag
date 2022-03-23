@@ -1,0 +1,223 @@
+print "Practice makes Perfect!"
+
+"""
+PS: All questions are Bloomberg tagged leetcode questions. I strongly advise doing LC tags for preparation.
+
+1. https://leetcode.com/problems/subsets
+
+2. Insert Delete Random
+
+3. LRU Cache (same as store URL in chronological order)
+
+4. Two city scheduling
+
+5. https://leetcode.com/discuss/interview-question/329221/Bloomberg-or-Phone-or-Ships
+
+6. Candy Crush 1D (same as remove-all-adjacent-duplicates-in-string-question)
+
+7. Merge-Files (similar to Merge-K-sorted list)
+
+8. Remove Parentheses
+
+9. LRU Cache
+
+10. Decode String
+
+11. Valid Anagram
+
+12. Palindrome Number (Optimize from O(N) to O(log N) time complexity)
+
+13. Flatten a multilevel doubly linked list (1. Using stack; 2. Recursive (follow-up))
+
+14. https://leetcode.com/discuss/interview-question/314733/Bloomberg-or-Output-data-from-a-stream-in-order
+
+15. Minimum steps to generate a number given only two operations (BFS)
+
+16. Reconstruct Itinerary
+
+17. Word Break II (  I used a trie for word break ii, which my interviewer wasn't thinking of initially )
+
+18. https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
+
+19. Longest Substring without repeating characters
+
+20. First Unique Element
+
+21. Flatten LinkedList
+
+22. https://leetcode.com/discuss/interview-question/346748/Bloomberg-or-Phone-Screen-or-File-Diffs-With-Ram-Constraints
+
+23. https://leetcode.com/discuss/interview-question/407179/Bloomberg-or-Remove-array-elements-in-given-index-ranges
+
+24. Word Search
+
+25. Binary tree right side view
+
+26. Word Search  II
+
+27. Merge Intervals
+
+28. Add two numbers
+
+29. Interleaving strings
+
+30. Trapping rain water
+
+31. Two sum
+
+32. Iterative and Recursive BS
+
+33. 3Sum
+
+34. Find the Kth largest element in a binary search tree
+
+35. Min Stack
+
+36. Valid Palindrome
+
+37. Shortest Palindrome
+
+38. Minimum insertion steps to make a string palindrome
+
+39. Entity Ownership (page 2)
+
+39. Add strings
+
+40. Validate Binary Search Tree ( How to implement it without recursion? )
+41. Kill Process
+
+42. Find minimum in rotated sorted array
+
+43. First unique character in a string (he kept on twisting the solution to see if I could still arrive at an answer)
+
+44. Concurrent Meetings (page 2)
+
+45. Add two numbers II
+
+46. 
+https://leetcode.com/problems/shuffle-an-array/
+
+47. 
+https://leetcode.com/problems/word-ladder/
+
+48.
+https://leetcode.com/discuss/interview-question/627139/Bloomberg-or-Onsite-or-Trending-Stock
+SIMILAR TO:
+https://leetcode.com/problems/lfu-cache
+
+49. Buy and sell stock I and II
+
+50. https://practice.geeksforgeeks.org/problems/maximum-collatz-sequence-length/0
+
+51. Populating next right pointers in each node II
+
+52. Welsh Alphabet - https://leetcode.com/discuss/interview-question/746169/Bloomberg-or-Phone-Screening-or-Sort-a-list-of-words-using-a-special-alphabet
+
+53. Subway Station (simalar to https://leetcode.com/problems/design-underground-system/ which they asked another candidate, Design Underground Subway System, LC #1396)Follow up questions:    a. What is the runtime & space complexity? Some additional questions e.g "What is the memory complexity if you have M stations? + explain how much data will be in each storage(hashmap) in the worst case", "Decrease the number of calls of hashmap operations".    b. Suppose the situation that in a real system you have one thread. Everything worked correctly for a week, and then it began to show strange results. What happened? (Overflow) What ways of solving this problem do you know?    c. Questions about the keys in the hashmap for this task + internals of hashmaps(basics)  
+
+54. https://leetcode.com/problems/all-paths-from-source-to-target/
+
+55. Number of Islands
+
+56. Minimum Remove to Make Valid Parentheses
+
+57. https://leetcode.com/problems/search-in-rotated-sorted-array/
+
+58. https://leetcode.com/problems/number-of-distinct-islands/
+
+59. https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+
+60. https://leetcode.com/problems/unique-paths-ii/
+
+61. Given an array that begins in increasing fashion and at a random point begins to descend, find a given target value in less than O(n) time.=> Example input: [1,3,10,14,16,7,6,2], target value = 3( basically you find the minimum ( inflection point ) using a binary search, and then use two binary searches on two sides separated by the minimum )
+
+62. Find the common ancestor of a BST given root and two nodesFollow up : What if the tree did not contain any of the nodes?
+
+63. Vertical Order Traversal Of Tree.
+
+64. https://leetcode.com/problems/first-missing-positive/
+
+65. https://leetcode.com/problems/evaluate-division/
+
+66.  https://leetcode.com/problems/word-break/
+
+67. https://leetcode.com/problems/decode-string/
+
+68. A group of n kids sitting in a circle, Given number k start counting from one of the kids. The kid who counts the number k goes out of the circle. continue from the next kid until there is only one kid left. find out the last kid.Example : n = 6 and k = 4
+1 --- 2 --- 3
+| ---------- |
+6 --- 5 --- 4Therefore if we start counting from 1 .. kids are out in the following order: 4 then 2 then 1 then 3 then 6 ....the kid no. 5 is the last kid left.Similar to https://leetcode.com/problems/elimination-game/
+
+69. Remove Invalid Parentheses
+
+70. https://leetcode.com/problems/copy-list-with-random-pointer/
+
+71. https://leetcode.com/problems/find-peak-element/
+
+72. https://leetcode.com/problems/design-browser-history/
+
+73. Merge K Linked Lists
+
+74.  https://leetcode.com/problems/text-justification/
+
+75. https://leetcode.com/problems/evaluate-division/
+
+75. Minesweeper
+
+76.  https://leetcode.com/problems/design-a-leaderboard/
+
+77. Trending stock: https://leetcode.com/discuss/interview-question/627139/
+
+78. Largest Rectangle Histogram 
+
+79. https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
+
+80. Design a system that gets packets out of order and how will you handle it.
+
+81. https://leetcode.com/problems/product-of-array-except-self/
+My Solution: For example, if you have a video, and you receive packets in order 0,1,2,5,6,3,7,4, you will have to keep track of the incoming and previous packet. If the incoming packet is not the expected packet, you will need to store it somewhere and wait until the expected packet has arrived. If the expected packet does not arrive until your timeout, you either continue streaming with the next packet or throw an exception based on the importance of having every packet. For example, if it is just a song, it might not make a big difference if a couple of seconds are skipped. I used maps to write the code for my solution.
+
+81. Course Schedule
+
+82. Last position of the given element in the sorted duplicate array
+
+83. https://leetcode.com/problems/unique-paths/
+
+84. https://leetcode.com/problems/valid-parentheses/
+
+85. https://leetcode.com/discuss/interview-question/352675/
+
+86.  https://leetcode.com/problems/symmetric-tree/
+
+87. https://leetcode.com/problems/sort-characters-by-frequency/
+
+88.  https://leetcode.com/problems/first-missing-positive/
+
+89. https://leetcode.com/problems/missing-element-in-sorted-array/
+
+90. https://leetcode.com/problems/top-k-frequent-words
+
+91. https://leetcode.com/problems/intersection-of-two-linked-lists/description/
+
+92.  https://leetcode.com/problems/string-compression/description/
+
+93.  largest palindrome substring within a string.
+
+94. rotate a matrix 90 degrees
+
+95. Differentiate between Java, Python and JavaScript
+
+96. How would you sort a list of stocks and fecth top 100 while new items are dynamicaly being added to the list.
+
+97. Write and explain iterative and recursive binary search algorithms.
+
+98. You work in an electronic exchange. Throughout the day, you receive ticks (trading data) which consists of product name and its traded volume of stocks. Eg: {name: 
+vodafone, volume: 20}. What data structure will you maintain if:-- You have to tell top k products traded by volume at end of day.-- You have to tell top k products traded by volume throughout the day.
+
+99. https://leetcode.com/discuss/interview-question/413734/Bloomberg-or-Re-order-Array-Based-on-Dictionary
+
+100. Invalid Transactions
+
+101. A TV show is "addictive" if the viewers quickly become addicted to the show and eventually finish watching the show. It can be tracked after viewing how many episodes of a show at least 70% of the viewers who watched that continued on to finish the show entirely. In other words, more that 70% of the viewers who watched the first x eposides of a show continued on to finish the entire show. The x is what we are looking for.Assumptions:All shows have 10 episodesviewers always start from the first episode (no skipping).
+
+"""
