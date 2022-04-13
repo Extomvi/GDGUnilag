@@ -1,7 +1,7 @@
 import datetime
 
 user = input('What is your name \n').capitalize()
-allowed_user = ['Tashy', 'TOla', 'Temi','Tolu','Taye']
+allowed_user = ['Tashy', 'Tola', 'Temi','Tolu','Taye']
 allowed_pass = ['passtashy', 'passtola', 'passtemi','passtolu','passtaye']
 x = datetime.datetime.now()
 deposit = 100000
@@ -15,7 +15,7 @@ while running:
             print('Welcome back %s' % user)
             print(x)
 
-            print('These are the available option: ')
+            print('These are the available options: ')
             print('1. Withdrawal')
             print('2. Deposit')
             print('3. Complaint')
