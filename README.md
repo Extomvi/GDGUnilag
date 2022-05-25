@@ -16,6 +16,9 @@ This repository consists of various folders:
 ## -Java
 	Includes implementations in Java including some data structures and algorithms problems.
 
+##  -inPython
+	This includes algorithm solutions in python as well as code solutions of some courses offered in *Python*.
+
 ## -Javascript
 	This includes my development in *Javascript*.
 
@@ -24,6 +27,9 @@ This repository consists of various folders:
 
 ## -NODEJS
 	This includes some application development using *Nodejs* package
+
+##	-php
+	This includes code written in *php*.
 
 ## -RESUME
 	Contains my *RESUME* as they change from time to time
