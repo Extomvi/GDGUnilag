@@ -56,3 +56,14 @@ class Motorcycle(Vehicle):
 
     def canFitInSpot(self, spot):
         return super().canFitInSpot(spot)
+    
+class ParkingLot:
+    def __init__(self):
+        self.levels = []
+        self.num_levels = 5
+
+    def ParkingLot(self):
+        pass
+
+    def parkVehicle(self, vehicle):
+        return Vehicle(vehicle)
