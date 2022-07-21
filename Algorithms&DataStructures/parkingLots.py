@@ -67,3 +67,20 @@ class ParkingLot:
 
     def parkVehicle(self, vehicle):
         return Vehicle(vehicle)
+    
+class Level:
+    def __init__(self):
+        self.floor = floor
+        self.spot = []
+        self.availableSpots = 0
+        self.SPOTS_PER_ROW = 10
+
+    def level(self, flr, numberSpots):
+        self.flr = flr
+        self.numberSpots = numberSpots
+
+    def availableSpots(self):
+        return self.availableSpots
+
+    def parkVehicle(self, vehicle):
+        pass
