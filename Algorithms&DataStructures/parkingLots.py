@@ -25,13 +25,6 @@ class Vehicle:
         self.spot = spot
         self.parkingSpots = self.parkingSpots(spot)
 
-        class Bus(Vehicle):
-    def Bus(self):
-        self.spotsNeeded = 5
-        self.size = self.VehicleSize.Large 
-
-    def canFitInSpot(self, spot):
-        return super().canFitInSpot(spot)
     
 class Bus(Vehicle):
     def Bus(self):
@@ -83,4 +76,14 @@ class Level:
         return self.availableSpots
 
     def parkVehicle(self, vehicle):
-        pass
+        self.vehicle = Vehicle(vehicle)
+
+    def parkStartingAtSpot(self, num, v):
+        self.num = num
+        self.v = Vehicle(v)
+
+    def findAvailableSpots(self, vehicle):
+        self.vehicle = Vehicle(vehicle)
+
+    def spotFreed(self):
+        self.availableSpots += 1
