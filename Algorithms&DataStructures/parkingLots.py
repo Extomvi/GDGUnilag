@@ -1,21 +1,28 @@
 """ An object oriented design for a parking lot"""
 
+from math import floor
+from sqlite3 import Row
+
+def VehicleSize(Motorcycle, Compact, Large):
+    pass
+
 class Vehicle:
     parkingSpots = [] #array of parking spots
 
     def __init__(self, licensePlate, spotsNeeded, size):
         self.licensePlate = licensePlate
         self.spotsNeeded = spotsNeeded
-        self.size = size
+        self.size = VehicleSize(size)
 
     def getSpotsNeeded(self):
         return self.spotsNeeded
 
     def getSize(self):
+        VehicleSize()
         return self.size
 
     def parkInSpot(self, s):
-        self.s = s
+        self.s = ParkingSpot(s)
         self.parkingSpots.add(s)
 
     def clearSpots(self):
@@ -25,7 +32,6 @@ class Vehicle:
         self.spot = spot
         self.parkingSpots = self.parkingSpots(spot)
 
-    
 class Bus(Vehicle):
     def Bus(self):
         self.spotsNeeded = 5
@@ -49,7 +55,7 @@ class Motorcycle(Vehicle):
 
     def canFitInSpot(self, spot):
         return super().canFitInSpot(spot)
-    
+
 class ParkingLot:
     def __init__(self):
         self.levels = []
@@ -59,8 +65,8 @@ class ParkingLot:
         pass
 
     def parkVehicle(self, vehicle):
-        return Vehicle(vehicle)
-    
+        return Vehicle(vehicle) 
+
 class Level:
     def __init__(self):
         self.floor = floor
@@ -87,3 +93,17 @@ class Level:
 
     def spotFreed(self):
         self.availableSpots += 1
+
+    
+class ParkingSpot:
+    def __init__(self, row, spotNumber, vehicle, spotSize, level):
+        self.row = row 
+        self.spotNumber = spotNumber
+        self.vehicle = Vehicle(vehicle)
+        self.spotSize = VehicleSize(spotSize)
+        self.level = Level(level)
+        
+        
+
+
+        
