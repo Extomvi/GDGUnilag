@@ -16,7 +16,6 @@ def dfs(visited, graph, root):
     if root not in visited:
         print(root)
         visited.add(root)
-        print(visited)
         for next in graph[root]:
             dfs(visited, graph, next) #recursive call
 dfs(visited, graph, 'A')
