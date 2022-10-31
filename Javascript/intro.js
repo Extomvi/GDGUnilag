@@ -1,7 +1,7 @@
  let personName = "Jeff";
  let stack = "JavaScript"
 
- console.log("My name is: " + personName);
+ console.log(`My name is: ${stack}`);
  console.log(`My stack is ${stack}`)
 
  const data = [];
